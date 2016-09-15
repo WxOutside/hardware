@@ -42,8 +42,20 @@ Some comments on this though:
 
 Soil moisture probe
 -------------------
-Originally I used an I2C soil moisture sensor from Catnip Electronics. It is not a reliable device for outdoor usage, and will eventually fail even with protective coatings on the sensor. I do not recomment this device.
-SDI-12 devices such as AquaFlex or Decagon are much more expensive, but will provide industry-grade informatino.
+Originally I used an I2C soil moisture sensor from Catnip Electronics. It is not a reliable device for outdoor usage, and will eventually fail even with protective coatings on the sensor. **I do not recomment this device.**
+SDI-12 devices such as AquaFlex or Decagon are much more expensive, but will provide industry-grade information, such as volumetric moisture readings, and battery voltages.
+
+SDI-12 USB adaptor
+------------------
+If you're going to use a professional moisture probe, such as an Aquaflex sensor, you'll need to use an adaptor to convert the SDI-12 interface to something the RPi can use.
+I recommend the SDI-12 USB adaptor, found here: https://liudr.wordpress.com/gadget/sdi-12-usb-adapter/
+This adds a tiny amount of overhead to the power consumption (3mA), but will work out of the box, with no configuration required.
+
+USB Splitter/Hub
+----------------
+Again, if you're using a professional moisture probe, then you'll also need a USB hub or splitter because the only USB port is now being shared between the 3G dongle and the USB adaptor.
+Any unpowered USB hub should work - just get something with as few ports as possible, and preferably with no LED lighting.
+The overhead for this is about 5mA.
 
 3G dongle (Huawei e3131)
 ------------------------
