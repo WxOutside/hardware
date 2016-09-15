@@ -11,8 +11,10 @@ Summary of power consumption when not busy (idling):
 * 3G dongle: 60mA
 * weatherPiArduino: 10mA
 * AM2315: 10mA
-* Soil probe: 10mA
-* Total power in idle: 150mA
+* USB hub: 5mA
+* Aquaflex soil sensor: 3mA
+* Soil probe: 10mA (not used anymore)
+* Total power in idle: 158mA
 
 Various measurements are taken across the hour, and all telemetry is sent out in one batch. Not all sensors are triggered at once, and the telemetry is sent during a time when no final measurements are taking place, so the 'in use' power consumption isn't a sum of every component.
 
@@ -22,7 +24,9 @@ Additional power consumption when triggered:
 * 3G dongle: 180mA
 * weatherPiAuduino: 20mA
 * AM2315: 40mA
-* Soil probe: 40mA
+* USB hub 5mA
+* Aquaflex soil sensor: 3mA
+* Soil probe: 10mA
 
 For the soil probe and the AM2315, these numbers also include the background process of storing the data, so it's more than the stated power consumption that each device claims to use.
 During the summer months, two 9w solar panels will easily provide enough power for continuous 24 hour operation - in fact, just one will suffice for most of summer. Occasional days of thick cloud cover or rain will not be severe enough to completely drain the battery because the daylight hours are long enough to provide a trickle of solar energy - enough to get us through to the next sunny day.
