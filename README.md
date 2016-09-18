@@ -7,4 +7,5 @@ Based on real in-the-field experience, this combination of hardware will last in
 This guide is still under construction as components get tested and better options are discovered. If you think there are better components to consider, or the configuration could be improved, please get in touch:
 
 email: geoff@wxoutside.tools
+
 twitter: @geoffmunn
