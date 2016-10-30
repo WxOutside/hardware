@@ -1,7 +1,7 @@
 Components
 ==========
 
-This file describes the exact hardware components you need to build a fully functioning weather station. You'll still need to get the software set up, but that is described in a subsequent file.
+This file describes the exact hardware components you need to build a fully functioning weather station. You'll still need to get the software set up, but that is described in the software repository (https://github.com/WxOutside/software).
 The components included here are specifically picked for a low power consumption weather station. You can swap any of these for something else, but the power usage may change, and there may be software incompatibilities that you'll have to navigate.
 
 Voltaic Systems V44 battery
@@ -22,7 +22,7 @@ The Raspberry Pi A+ runs all the sensors, stores the telemetry and sends message
 If an A+ is no longer available, a Pi Zero will also be a good option - it should have roughly the same power consumption.
 The Pi 3 will work, but consumes much more power and will drain your battery faster.
 
-The A+ is not a particularly powerful unit though, and resource intensive processes should be avoided to ensure stability. The most lightweight solution was to use Python for communicating with the sensors, and to send all messages via the Linux email SMTP protocol.
+The A+ is not a particularly powerful unit though, and resource intensive processes should be avoided to ensure stability. The most lightweight solution was to use Python for communicating with the sensors, and to send all messages via the Linux SMTP email protocol.
 A custom-built email message bus sends telemetry back to the main site, which responds with a receipt. When the receipt is received, the telemetry records are deleted. In cases where there is an outage (cellular network unavailable, or the RPi shut down before messages were sent), then messages are queued for resending. Although it might be delayed in some circumstances, no recorded data is ever lost.
 
 https://www.raspberrypi.org/
@@ -39,6 +39,7 @@ AM2315
 The AM2315 temperature and humidity sensor is a very reliable device and easy to set up. This is weather-proof, but not water proof, so it needs a solar radiation shield, which you can 3D print using plans found on the web (link below at Thingiverse)
 
 https://www.adafruit.com/product/1293
+
 http://www.thingiverse.com/thing:1067700
 
 Wind Anemometer
